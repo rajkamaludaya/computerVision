@@ -4,11 +4,13 @@ import numpy as np
 CLASS_FILE_PATH = 'input/classification_classes_ILSVRC2012.txt'
 CONFIG_FILE_PATH = 'models/DenseNet_121.prototxt'
 MODEL_FILE_PATH = 'models/DenseNet_121.caffemodel'
+IMAGE_PATH = 'input/image1.jpg' # Change image path for different images
+
 
 
 def classifyImage(classNames,configFile,model_file,framework):
     model = cv2.dnn.readNet(model=configFile, config=model_file, framework='Caffe')
-    tiger = cv2.imread('input/image1.jpg', -1)
+    tiger = cv2.imread(IMAGE_PATH, -1)
     blob = cv2.dnn.blobFromImage(image=tiger, scalefactor=0.017, size=(224, 224), mean=(104, 117, 123), swapRB=False,
                                  crop=False)
     model.setInput(blob)
