@@ -4,7 +4,7 @@ import numpy as np
 CLASS_FILE_PATH = 'input/classification_classes_ILSVRC2012.txt'
 CONFIG_FILE_PATH = 'models/DenseNet_121.prototxt'
 MODEL_FILE_PATH = 'models/DenseNet_121.caffemodel'
-IMAGE_PATH = 'input/image1.jpg' # Change image path for different images
+IMAGE_PATH = 'input/image4.jpg' # Change image path for different images
 
 
 
